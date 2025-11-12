@@ -1,7 +1,7 @@
 import Card from "@/app/components/shared/card/card";
 import { Container } from "@/app/components/shared/contianer/container";
 
-// Sample product data with real product images
+// Sample product data with mixed images
 const sampleProducts = [
   {
     id: "1",
@@ -85,11 +85,19 @@ export default function ProductsPage() {
   return (
     <Container>
 
-      <h1 className="text-3xl font-bold mb-8 text-center">Our Fabric Collection</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {sampleProducts.map((product) => (
-          <Card key={product.id} product={product} />
-        ))}
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-8 text-center">Our Fabric Collection</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {sampleProducts.map((product) => (
+            <Card key={product.id} product={product} />
+          ))}
+        </div>
+        {/* Orange "View More Products" button */}
+        <div className="flex justify-center mt-8">
+          <button className="bg-orange-500 cursor-pointer hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 shadow-lg">
+            View More Products
+          </button>
+        </div>
       </div>
     </Container>
   );

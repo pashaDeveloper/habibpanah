@@ -46,9 +46,9 @@ const Card: React.FC<Props> = ({ product }) => {
         href={`/${product.category[0]}/${product.category[1]}/${product.category[2]}/${product.slug}`}
         className="flex md:items-center md:flex-col relative w-full"
       >
-        {/* Mobile layout - horizontal with skeleton on left and content on right */}
-        <div className="md:hidden w-1/3 relative bg-slate-400/30 px-1 py-1 rounded-bl-xl rounded-tl-xl flex items-center justify-center">
-          <div className="flex items-center h-full w-full rounded-lg bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
+        {/* Mobile layout - horizontal with square skeleton on left and content on right */}
+        <div className="md:hidden w-2/5 relative bg-slate-400/30 p-1 rounded-bl-xl rounded-tl-xl flex items-center justify-center" style={{ aspectRatio: '1/1' }}>
+        
           {product?.discount ? (
             <span className="w-5 h-5 block absolute -top-1 -left-1">
               <img 
@@ -60,9 +60,9 @@ const Card: React.FC<Props> = ({ product }) => {
           ) : null}
         </div>
         
-        {/* Desktop layout - vertical with skeleton on top and content below */}
-        <div className="hidden md:block w-full relative bg-slate-400/30 px-6 py-2 rounded-tr-xl rounded-tl-xl flex flex-col justify-between items-center">
-          <div className="flex items-center h-full w-full rounded-lg bg-gray-200 dark:bg-gray-700 animate-pulse" style={{ height: '300px' }}></div>
+        {/* Desktop layout - vertical with square skeleton on top and content below */}
+        <div className="hidden md:block w-full relative bg-slate-400/30 p-2 rounded-tr-xl rounded-tl-xl  flex-col justify-between items-center" style={{ aspectRatio: '1/1' }}>
+         
           {product?.discount ? (
             <span className="w-8 sm:w-auto block absolute -top-2 -left-2">
               <img 
@@ -75,7 +75,7 @@ const Card: React.FC<Props> = ({ product }) => {
         </div>
         
         {/* Content area with skeleton text */}
-        <div className="flex flex-col justify-between flex-grow w-2/3 md:w-full px-2 md:px-3 py-2 md:py-4">
+        <div className="flex flex-col justify-between flex-grow w-3/5 md:w-full px-2 md:px-3 py-2 md:py-4">
           <div className="flex justify-center md:justify-start flex-col flex-grow overflow-hidden">
             <div className="self-center md:self-start">
               {/* Skeleton star rating */}
