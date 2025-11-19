@@ -1,5 +1,6 @@
 import { Navbar } from "@/app/components/navbar";
 import { Footer } from "@/app/components/footer";
+import ToggleLanguage from "@/app/components/shared/language/ToggleLanguage";
 
 export function Main({ children }: { children: React.ReactNode }) {
   return (
@@ -9,6 +10,7 @@ export function Main({ children }: { children: React.ReactNode }) {
         {children}
       </main>
       <Footer />
+      <ToggleLanguage />
     </div>
   );
 }

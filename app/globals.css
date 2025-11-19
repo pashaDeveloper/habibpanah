@@ -11,10 +11,18 @@
   --foreground: #ededed;
 }
 
+html[dir="ltr"] {
+  --font-family: "Poppins", "Roboto", "sans-serif";
+}
+
+html[dir="rtl"] {
+  --font-family: var(--font-iran-yekan), "Iran Yekan", "sans-serif";
+}
+
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family);
 }
 
 .top-nav {
