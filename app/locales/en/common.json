@@ -61,5 +61,30 @@
       "title": "Expert Support",
       "description": "Our fabric specialists are ready to help with your selection."
     }
+  },
+  "hero": {
+    "summer_collection": {
+      "title": "Summer Collection",
+      "description": "Bright and vibrant fabrics for the sunny season"
+    },
+    "winter_warmers": {
+      "title": "Winter Warmers",
+      "description": "Cozy and warm textures for cold days"
+    },
+    "spring_blossoms": {
+      "title": "Spring Blossoms",
+      "description": "Fresh floral patterns for renewal"
+    },
+    "autumn_hues": {
+      "title": "Autumn Hues",
+      "description": "Rich earthy tones for the fall season"
+    },
+    "classic_neutrals": {
+      "title": "Classic Neutrals",
+      "description": "Timeless patterns in elegant tones"
+    },
+    "previous_slide": "Previous slide",
+    "next_slide": "Next slide",
+    "go_to_slide": "Go to slide"
   }
 }
