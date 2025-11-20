@@ -1,0 +1,65 @@
+{
+  "language_selector": "语言选择器",
+  "languages": {
+    "fa": "فارسی",
+    "en": "English",
+    "tr": "Türkçe",
+    "ar": "العربية",
+    "zh": "中文"
+  },
+  "home": {
+    "title": "哈比卜·帕纳纺织店",
+    "description": "以实惠价格提供各种面料的在线商店"
+  },
+  "navigation": {
+    "home": "首页",
+    "products": "产品",
+    "about": "关于我们",
+    "contact": "联系我们"
+  },
+  "categories": {
+    "title": "按类别购物",
+    "wedding_attire": "婚纱",
+    "mens_casual": "男装",
+    "womens_casual": "女装",
+    "womens_formal": "女式正装",
+    "mens_formal": "男式正装",
+    "winter": "冬季"
+  },
+  "stories": {
+    "customer_satisfaction": "客户满意度",
+    "stretch_lace": "弹力花边",
+    "guipure_lace": "吉普蕾花边",
+    "dutch_cotton": "荷兰棉",
+    "french_lace": "法式花边",
+    "needlework_lace": "刺绣花边",
+    "worked_lace": "工艺花边",
+    "satin_silk": "缎面丝绸",
+    "silk_satin": "丝缎",
+    "atlas_silk": " atlas 丝绸",
+    "crepe_silk": "绉纱丝绸",
+    "velvet_curtain": "丝绒窗帘"
+  },
+  "features": {
+    "premium_quality": {
+      "title": "优质品质",
+      "description": "我们的面料采用最优质的材料和工艺制作。"
+    },
+    "wide_selection": {
+      "title": "广泛选择",
+      "description": "从数百种图案、颜色和纹理中选择。"
+    },
+    "fast_delivery": {
+      "title": "快速配送",
+      "description": "快速安全地将您的面料送到家门口。"
+    },
+    "easy_returns": {
+      "title": "轻松退货",
+      "description": "不满意？30天内退货可全额退款。"
+    },
+    "expert_support": {
+      "title": "专家支持",
+      "description": "我们的面料专家随时准备帮助您选择。"
+    }
+  }
+}

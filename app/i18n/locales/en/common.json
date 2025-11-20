@@ -1,0 +1,10 @@
+{
+  "language_selector": "Language Selector",
+  "languages": {
+    "fa": "فارسی",
+    "en": "English",
+    "tr": "Türkçe",
+    "ar": "العربية",
+    "zh": "中文"
+  }
+}

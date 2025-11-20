@@ -1,0 +1,65 @@
+{
+  "language_selector": "Dil Seçici",
+  "languages": {
+    "fa": "فارسی",
+    "en": "English",
+    "tr": "Türkçe",
+    "ar": "العربية",
+    "zh": "中文"
+  },
+  "home": {
+    "title": "Habib Panah Kumaş Mağazası",
+    "description": "Uygun fiyatlı tüm kumaş türleri için çevrimiçi mağaza"
+  },
+  "navigation": {
+    "home": "Ana Sayfa",
+    "products": "Ürünler",
+    "about": "Hakkımızda",
+    "contact": "İletişim"
+  },
+  "categories": {
+    "title": "Kategoriye Göre Alışveriş",
+    "wedding_attire": "Düğün Kıyafeti",
+    "mens_casual": "Erkek",
+    "womens_casual": "Kadın",
+    "womens_formal": "Kadın Resmi",
+    "mens_formal": "Erkek Resmi",
+    "winter": "Kış"
+  },
+  "stories": {
+    "customer_satisfaction": "Müşteri Memnuniyeti",
+    "stretch_lace": "Esnek Dantel",
+    "guipure_lace": "Guipure Danteli",
+    "dutch_cotton": "Hollanda Pamuğu",
+    "french_lace": "Fransız Danteli",
+    "needlework_lace": "İğne İşleri Danteli",
+    "worked_lace": "İşlenmiş Dantel",
+    "satin_silk": "Saten İpek",
+    "silk_satin": "İpek Saten",
+    "atlas_silk": "Atlas İpeği",
+    "crepe_silk": "Krep İpeği",
+    "velvet_curtain": "Kadife Perde"
+  },
+  "features": {
+    "premium_quality": {
+      "title": "Özel Kalite",
+      "description": "Kumaşlarımız en kaliteli malzemeler ve zanaatkarlıkla üretilmektedir."
+    },
+    "wide_selection": {
+      "title": "Geniş Seçim",
+      "description": "Yüzlerce desen, renk ve dokudan seçiminizi yapın."
+    },
+    "fast_delivery": {
+      "title": "Hızlı Teslimat",
+      "description": "Kumaşlarınızı hızlı ve güvenli bir şekilde kapınıza teslim edin."
+    },
+    "easy_returns": {
+      "title": "Kolay İade",
+      "description": "Memnun değil misiniz? 30 gün içinde tam iade alın."
+    },
+    "expert_support": {
+      "title": "Uzman Destek",
+      "description": "Kumaş uzmanlarımız seçiminizde size yardımcı olmaya hazırdır."
+    }
+  }
+}

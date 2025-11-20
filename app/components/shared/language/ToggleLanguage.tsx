@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 interface Language {
   code: string;
@@ -8,16 +10,47 @@ interface Language {
 }
 
 function ToggleLanguage() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const t = useTranslations(); // Use root translations
+  const tLanguages = useTranslations('languages'); // Use languages namespace for language names
+  
   const [isOpen, setIsOpen] = useState(false);
   const [languages, setLanguages] = useState<Language[]>([
-    { code: 'fa-IR', name: 'فارسی' },
-    { code: 'zh-CN', name: '中文' },
-    { code: 'tr-TR', name: 'Türkçe' },
-    { code: 'ar-AE', name: 'العربية' },
-    { code: 'en-US', name: 'English' }
+    { code: 'fa', name: tLanguages('fa') },
+    { code: 'en', name: tLanguages('en') },
+    { code: 'tr', name: tLanguages('tr') },
+    { code: 'ar', name: tLanguages('ar') },
+    { code: 'zh', name: tLanguages('zh') }
   ]);
-  const [selectedLanguage, setSelectedLanguage] = useState<Language>({ code: 'fa-IR', name: 'فارسی' });
+  const [selectedLanguage, setSelectedLanguage] = useState<Language>({ code: 'fa', name: tLanguages('fa') });
   const btnRef = useRef<HTMLButtonElement>(null);
+
+  // Set the current language based on the pathname
+  useEffect(() => {
+    const pathSegments = pathname.split('/').filter(segment => segment);
+    const currentLang = pathSegments[0];
+    
+    // Check if the first segment is a valid language code
+    const isValidLang = ['fa', 'en', 'tr', 'ar', 'zh'].includes(currentLang);
+    
+    if (isValidLang && currentLang !== 'fa') {
+      // Update selected language if it's not the default (fa)
+      const lang = languages.find(l => l.code === currentLang);
+      if (lang) {
+        setSelectedLanguage(lang);
+        
+        // Move selected language to the top of the list
+        const newLanguages = [...languages];
+        const [selected] = newLanguages.filter(l => l.code === currentLang);
+        const rest = newLanguages.filter(l => l.code !== currentLang);
+        setLanguages([selected, ...rest]);
+      }
+    } else {
+      // Default to Persian (fa) which doesn't need a prefix
+      setSelectedLanguage({ code: 'fa', name: tLanguages('fa') });
+    }
+  }, [pathname, tLanguages]);
 
   const handleMouseEnter = () => {
     setIsOpen(true);
@@ -49,6 +82,37 @@ function ToggleLanguage() {
       setLanguages(newLanguages);
       setSelectedLanguage(newSelectedLanguage);
 
+      // Change the route based on the selected language
+      const pathSegments = pathname.split('/').filter(segment => segment);
+      const currentLang = pathSegments[0];
+      
+      // Check if the first segment is a valid language code
+      const isValidLang = ['fa', 'en', 'tr', 'ar', 'zh'].includes(currentLang);
+      
+      let newPath = pathname;
+      
+      if (newSelectedLanguage.code === 'fa') {
+        // For Persian, remove language prefix if it exists
+        if (isValidLang) {
+          // Remove the language prefix
+          newPath = '/' + pathSegments.slice(1).join('/');
+          if (newPath === '') newPath = '/';
+        }
+      } else {
+        // For other languages, add or replace language prefix
+        if (isValidLang) {
+          // Replace existing language prefix
+          pathSegments[0] = newSelectedLanguage.code;
+          newPath = '/' + pathSegments.join('/');
+        } else {
+          // Add new language prefix
+          newPath = '/' + newSelectedLanguage.code + (pathname === '/' ? '' : pathname);
+        }
+      }
+      
+      // Navigate to the new path using router.push for client-side navigation
+      router.push(newPath);
+      
       console.log(`زبان به ${newSelectedLanguage.name} با کد ${newSelectedLanguage.code} تغییر کرد.`);
     }, 500); // Slightly longer than the CSS transition duration to ensure it's fully closed
   };
@@ -70,7 +134,7 @@ function ToggleLanguage() {
   // Flag components
   const FlagSVG = ({ code }: { code: string }) => {
     switch (code) {
-      case 'en-US':
+      case 'en':
         return (
           <svg xmlns="http://www.w3.org/2000/svg" height="480" width="640" viewBox="0 0 640 480" className="w-8 h-5 rounded-sm shadow-[0_1px_3px_rgba(0,0,0,0.2)] flex-shrink-0">
             <g fillRule="evenodd">
@@ -109,7 +173,7 @@ function ToggleLanguage() {
             </g>
           </svg>
         );
-      case 'ar-AE':
+      case 'ar':
         return (
           <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 12 6" className="w-8 h-5 rounded-sm shadow-[0_1px_3px_rgba(0,0,0,0.2)] flex-shrink-0">
             <rect width="12" height="6" fill="#00732f" />
@@ -118,7 +182,7 @@ function ToggleLanguage() {
             <rect width="3" height="6" fill="#f00" />
           </svg>
         );
-      case 'tr-TR':
+      case 'tr':
         return (
           <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" className="w-8 h-5 rounded-sm shadow-[0_1px_3px_rgba(0,0,0,0.2)] flex-shrink-0">
             <rect width="1200" height="800" fill="#E30A17" />
@@ -127,7 +191,7 @@ function ToggleLanguage() {
             <polygon style={{ fill: '#ffffff' }} points="583.334,400 764.235,458.779 652.431,304.894 652.431,495.106 764.235,341.221" />
           </svg>
         );
-      case 'zh-CN':
+      case 'zh':
         return (
           <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="900" height="600" viewBox="0 0 30 20" className="w-8 h-5 rounded-sm shadow-[0_1px_3px_rgba(0,0,0,0.2)] flex-shrink-0">
             <defs>
@@ -141,7 +205,7 @@ function ToggleLanguage() {
             <use xlinkHref="#s" transform="translate(10,9) rotate(20.659808)" />
           </svg>
         );
-      case 'fa-IR':
+      case 'fa':
         return (
           <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="630" height="360" viewBox="0 0 630 360" className="w-8 h-5 rounded-sm shadow-[0_1px_3px_rgba(0,0,0,0.2)] flex-shrink-0">
             <rect width="630" height="360" fill="#da0000" />
@@ -184,10 +248,11 @@ function ToggleLanguage() {
     <button
       ref={btnRef}
       className={`
-        fixed bottom-10 right-0 z-50
+        fixed bottom-10 ltr:right-0 rtl:right-0 z-50
         bg-linear-to-l from-[#8f4aec] via-[#7f53ef] to-[#2586ff]
         border-none text-white
-        rounded-l-3xl
+        ltr:rounded-l-3xl
+        rtl:rounded-l-3xl
         w-[120px]
         font-iranyekan
         cursor-pointer
@@ -199,14 +264,14 @@ function ToggleLanguage() {
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      aria-label="انتخاب زبان"
+      aria-label={t('language_selector')}
     >
       <ul className="list-none p-0 m-0 flex flex-col-reverse">
         <li
           key={selectedLanguage.code}
           className={`
             h-[46px] px-3 py-1.5
-            flex items-center gap-3
+            flex items-center gap-3 rtl:flex-row-reverse
             font-bold
           `}
         >
@@ -220,7 +285,7 @@ function ToggleLanguage() {
               className={`
                 h-[46px] px-3 py-1.5
                 flex items-center gap-3
-                cursor-pointer
+                cursor-pointer rtl:flex-row-reverse
                 transition-colors duration-200 ease
                 ${index === languages.length - 1 ? 'hover:bg-white/10 hover:rounded-l-3xl' : ''}
                 ${index === 1 ? 'hover:bg-white/10 hover:rounded-l-3xl' : ''}

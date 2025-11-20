@@ -1,0 +1,65 @@
+{
+  "language_selector": "انتخاب زبان",
+  "languages": {
+    "fa": "فارسی",
+    "en": "English",
+    "tr": "Türkçe",
+    "ar": "العربية",
+    "zh": "中文"
+  },
+  "home": {
+    "title": "پارچه سرای حبیب پناه",
+    "description": "فروشگاه آنلاین انواع پارچه با قیمت مناسب"
+  },
+  "navigation": {
+    "home": "خانه",
+    "products": "محصولات",
+    "about": "درباره ما",
+    "contact": "تماس با ما"
+  },
+  "categories": {
+    "title": "خرید بر اساس دسته بندی",
+    "wedding_attire": "لباس عروس",
+    "mens_casual": "مردانه",
+    "womens_casual": "زنانه",
+    "womens_formal": "زنانه مجلسی",
+    "mens_formal": "مردانه مجلسی",
+    "winter": "زمستانی"
+  },
+  "stories": {
+    "customer_satisfaction": "رضایت مشتریان",
+    "stretch_lace": "دانتل کشی",
+    "guipure_lace": "دانتل گیپور",
+    "dutch_cotton": "پنبه هلندی",
+    "french_lace": "دانتل فرانسوی",
+    "needlework_lace": "دانتل سوزن دوزی",
+    "worked_lace": "دانتل کار شده",
+    "satin_silk": "ابریشم ساتن",
+    "silk_satin": "ساتن ابریشمی",
+    "atlas_silk": "ابریشم اطلسی",
+    "crepe_silk": "ابریشم کرپ",
+    "velvet_curtain": "پرده مخملی"
+  },
+  "features": {
+    "premium_quality": {
+      "title": "کیفیت عالی",
+      "description": "پارچه های ما با بهترین مواد و مهارت ساخته شده اند."
+    },
+    "wide_selection": {
+      "title": "انتخاب گسترده",
+      "description": "از صدها الگو، رنگ و بافت انتخاب کنید."
+    },
+    "fast_delivery": {
+      "title": "تحویل سریع",
+      "description": "پارچه های خود را سریعاً و با ایمنی به آستانه خانه تحویل بگیرید."
+    },
+    "easy_returns": {
+      "title": "بازگشت آسان",
+      "description": "راضی نیستید؟ ظرف 30 روز برای بازپرداخت کامل مرجوع کنید."
+    },
+    "expert_support": {
+      "title": "پشتیبانی تخصصی",
+      "description": "متخصصان پارچه ما آماده اند تا در انتخاب شما کمک کنند."
+    }
+  }
+}

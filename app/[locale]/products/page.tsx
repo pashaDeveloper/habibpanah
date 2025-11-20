@@ -1,5 +1,5 @@
 import Card from "@/app/components/shared/card/card";
-import { Container } from "@/app/components/shared/contianer/container";
+import { Container } from "@/app/components/shared/container";
 
 // Sample product data with mixed images
 const sampleProducts = [

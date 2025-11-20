@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Container } from "@/app/components/shared/contianer/container";
+import { Container } from "@/app/components/shared/container";
 
 interface BannerItem {
   id: number;

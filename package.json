@@ -2,6 +2,7 @@
   "name": "fabric-store",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +10,13 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "i18next": "^25.6.3",
     "iconsax-react": "^0.0.8",
     "lucide-react": "^0.553.0",
     "next": "16.0.1",
-    "next-i18next": "^15.4.2",
+    "next-intl": "^4.5.5",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "react-i18next": "^16.3.4",
+    "react-icons": "^5.5.0",
     "swiper": "^12.0.3"
   },
   "devDependencies": {

@@ -1,136 +1,115 @@
 'use client'
-import { Container } from "@/app/components/shared/contianer/container";
-import React, { useState } from "react";
+import { Container } from "@/app/components/shared/container";
+import React from "react";
+import { useTranslations } from 'next-intl';
+// Swiper components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+// Icons from lucide-react
+import { 
+  Award, 
+  Package, 
+  Truck, 
+  RotateCcw, 
+  Headset 
+} from 'lucide-react';
 
 export function Features() {
-  // Sample data for features
+  const t = useTranslations('features');
+  
+  // Sample data for features with icons
   const features = [
     {
       id: 1,
-      title: "Premium Quality",
-      description: "Our fabrics are made with the finest materials and craftsmanship.",
-      color: "from-blue-500/10 to-blue-700/10",
-      darkColor: "from-blue-700/30 to-blue-900/30"
+      title: t('premium_quality.title'),
+      description: t('premium_quality.description'),
+      icon: <Award className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
+      color: "bg-blue-50 dark:bg-blue-900/30",
+      borderColor: "border-blue-200 dark:border-blue-800"
     },
     {
       id: 2,
-      title: "Wide Selection",
-      description: "Choose from hundreds of patterns, colors, and textures.",
-      color: "from-purple-500/10 to-purple-700/10",
-      darkColor: "from-purple-700/30 to-purple-900/30"
+      title: t('wide_selection.title'),
+      description: t('wide_selection.description'),
+      icon: <Package className="w-6 h-6 text-purple-600 dark:text-purple-400" />,
+      color: "bg-purple-50 dark:bg-purple-900/30",
+      borderColor: "border-purple-200 dark:border-purple-800"
     },
     {
       id: 3,
-      title: "Fast Delivery",
-      description: "Get your fabrics delivered to your doorstep quickly and safely.",
-      color: "from-green-500/10 to-green-700/10",
-      darkColor: "from-green-700/30 to-green-900/30"
+      title: t('fast_delivery.title'),
+      description: t('fast_delivery.description'),
+      icon: <Truck className="w-6 h-6 text-green-600 dark:text-green-400" />,
+      color: "bg-green-50 dark:bg-green-900/30",
+      borderColor: "border-green-200 dark:border-green-800"
     },
     {
       id: 4,
-      title: "Easy Returns",
-      description: "Not satisfied? Return within 30 days for a full refund.",
-      color: "from-yellow-500/10 to-yellow-700/10",
-      darkColor: "from-yellow-700/30 to-yellow-900/30"
+      title: t('easy_returns.title'),
+      description: t('easy_returns.description'),
+      icon: <RotateCcw className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />,
+      color: "bg-yellow-50 dark:bg-yellow-900/30",
+      borderColor: "border-yellow-200 dark:border-yellow-800"
     },
     {
       id: 5,
-      title: "Expert Support",
-      description: "Our fabric specialists are ready to help with your selection.",
-      color: "from-pink-500/10 to-pink-700/10",
-      darkColor: "from-pink-700/30 to-pink-900/30"
+      title: t('expert_support.title'),
+      description: t('expert_support.description'),
+      icon: <Headset className="w-6 h-6 text-pink-600 dark:text-pink-400" />,
+      color: "bg-pink-50 dark:bg-pink-900/30",
+      borderColor: "border-pink-200 dark:border-pink-800"
     },
-
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const goToPrev = () => {
-    // Move back by 2 items (one slide)
-    setCurrentIndex(currentIndex === 0 ? features.length - 2 : currentIndex - 2);
-  };
-
-  const goToNext = () => {
-    // Move forward by 2 items (one slide)
-    setCurrentIndex(currentIndex >= features.length - 2 ? 0 : currentIndex + 2);
-  };
-
-  // Calculate number of dots needed (since 2 items are visible at a time)
-  const numberOfDots = Math.ceil(features.length / 2);
-
   return (
-    <Container>
+    <>
       {/* Mobile swiper view */}
       <div className="md:hidden relative">
-        <div className="flex overflow-x-hidden">
-          <div 
-            className="flex gap-x-2 transition-transform duration-300 ease-in-out" 
-            style={{ transform: `translateX(-${(currentIndex / 2) * 100}%)` }}
-          >
-            {features.map((feature) => (
-              <div 
-                key={feature.id} 
-                className="flex-shrink-0 w-1/2 py-2"
-              >
-                <div 
-                  className={`bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-3 rounded-lg`}
-                >
-                  <h3 className="text-sm font-semibold mb-1">{feature.title}</h3>
-                  <p className="text-xs opacity-90">{feature.description}</p>
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={20}
+          slidesPerView={1.2}
+          centeredSlides={true}
+          loop={true}
+          pagination={{ 
+            clickable: true,
+            dynamicBullets: true
+          }}
+          className="py-4"
+        >
+          {features.map((feature) => (
+            <SwiperSlide key={feature.id}>
+              <div className={`${feature.color} border ${feature.borderColor} p-5 rounded-xl shadow-sm`}>
+                <div className="flex items-center gap-3 mb-3">
+                  {feature.icon}
+                  <h3 className="text-lg font-semibold">{feature.title}</h3>
                 </div>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">{feature.description}</p>
               </div>
-            ))}
-          </div>
-        </div>
-        
-        {/* Navigation arrows for mobile */}
-        <button 
-          onClick={goToPrev}
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 dark:bg-gray-800/50 backdrop-blur-sm rounded-full p-1 transition-all"
-          aria-label="Previous slide"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-800 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        
-        <button 
-          onClick={goToNext}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 dark:bg-gray-800/50 backdrop-blur-sm rounded-full p-1 transition-all"
-          aria-label="Next slide"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-800 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-        
-        {/* Dots indicator for mobile - adjusted for w-1/2 items */}
-        <div className="flex justify-center mt-2 gap-x-1">
-          {Array.from({ length: numberOfDots }).map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index * 2)}
-              className={`w-2 h-2 rounded-full transition-all ${
-                index === Math.floor(currentIndex / 2) ? 'bg-gray-800 dark:bg-white' : 'bg-gray-400 dark:bg-gray-500'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
       
       {/* Desktop grid view */}
-      <div className="hidden md:grid md:grid-cols-5 gap-3 mt-4">
+      <div className="hidden md:grid md:grid-cols-5 gap-4 mt-6">
         {features.map((feature) => (
           <div 
             key={feature.id} 
-            className={`bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-3 rounded-lg`}
+            className={`${feature.color} border ${feature.borderColor} p-5 rounded-xl shadow-sm transition-transform hover:scale-[1.02]`}
           >
-            <h3 className="text-sm font-semibold mb-1">{feature.title}</h3>
-            <p className="text-xs opacity-90">{feature.description}</p>
+            <div className="flex items-center gap-3 mb-3">
+              {feature.icon}
+              <h3 className="text-lg font-semibold">{feature.title}</h3>
+            </div>
+            <p className="text-gray-600 dark:text-gray-300 text-sm">{feature.description}</p>
           </div>
         ))}
       </div>
-    </Container>
+    </>
   );
 }

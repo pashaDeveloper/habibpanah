@@ -12,7 +12,7 @@
 }
 
 html[dir="ltr"] {
-  --font-family: "Poppins", "Roboto", "sans-serif";
+  --font-family: var(--font-iran-yekan), "Iran Yekan", "sans-serif";
 }
 
 html[dir="rtl"] {
@@ -33,4 +33,30 @@ body {
   right: .75rem;
   max-width: 1280px;
   border-width: 1px;
+}
+
+/* RTL specific styles */
+html[dir="rtl"] .top-nav {
+  left: .75rem;
+  right: .75rem;
+}
+
+/* RTL specific styles for the language toggle */
+html[dir="rtl"] .fixed.bottom-10.right-0 {
+  right: auto;
+  left: 0;
+  border-radius: 0 1.5rem 1.5rem 0;
+}
+
+html[dir="rtl"] .rounded-l-3xl {
+  border-radius: 0 1.5rem 1.5rem 0 !important;
+}
+
+/* RTL specific styles for flex alignment */
+html[dir="rtl"] .flex.items-center.justify-between {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .flex.justify-center.items-center.gap-x-4 {
+  flex-direction: row-reverse;
 }

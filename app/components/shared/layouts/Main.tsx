@@ -4,9 +4,9 @@ import ToggleLanguage from "@/app/components/shared/language/ToggleLanguage";
 
 export function Main({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col gap-4 min-h-screen">
       <Navbar />
-      <main className="grow">
+      <main className="grow ">
         {children}
       </main>
       <Footer />

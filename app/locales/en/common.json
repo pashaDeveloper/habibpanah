@@ -1,0 +1,65 @@
+{
+  "language_selector": "Language Selector",
+  "languages": {
+    "fa": "فارسی",
+    "en": "English",
+    "tr": "Türkçe",
+    "ar": "العربية",
+    "zh": "中文"
+  },
+  "home": {
+    "title": "Habib Panah Fabric Store",
+    "description": "Online store for all types of fabrics at affordable prices"
+  },
+  "navigation": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About Us",
+    "contact": "Contact Us"
+  },
+  "categories": {
+    "title": "Shop by Category",
+    "wedding_attire": "Wedding Attire",
+    "mens_casual": "Men's",
+    "womens_casual": "Women's",
+    "womens_formal": "Women's Formal",
+    "mens_formal": "Men's Formal",
+    "winter": "Winter"
+  },
+  "stories": {
+    "customer_satisfaction": "Customer Satisfaction",
+    "stretch_lace": "Stretch Lace",
+    "guipure_lace": "Guipure Lace",
+    "dutch_cotton": "Dutch Cotton",
+    "french_lace": "French Lace",
+    "needlework_lace": "Needlework Lace",
+    "worked_lace": "Worked Lace",
+    "satin_silk": "Satin Silk",
+    "silk_satin": "Silk Satin",
+    "atlas_silk": "Atlas Silk",
+    "crepe_silk": "Crepe Silk",
+    "velvet_curtain": "Velvet Curtain"
+  },
+  "features": {
+    "premium_quality": {
+      "title": "Premium Quality",
+      "description": "Our fabrics are made with the finest materials and craftsmanship."
+    },
+    "wide_selection": {
+      "title": "Wide Selection",
+      "description": "Choose from hundreds of patterns, colors, and textures."
+    },
+    "fast_delivery": {
+      "title": "Fast Delivery",
+      "description": "Get your fabrics delivered to your doorstep quickly and safely."
+    },
+    "easy_returns": {
+      "title": "Easy Returns",
+      "description": "Not satisfied? Return within 30 days for a full refund."
+    },
+    "expert_support": {
+      "title": "Expert Support",
+      "description": "Our fabric specialists are ready to help with your selection."
+    }
+  }
+}

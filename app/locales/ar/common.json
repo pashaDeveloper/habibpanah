@@ -1,0 +1,65 @@
+{
+  "language_selector": "أداة اختيار اللغة",
+  "languages": {
+    "fa": "فارسی",
+    "en": "English",
+    "tr": "Türkçe",
+    "ar": "العربية",
+    "zh": "中文"
+  },
+  "home": {
+    "title": "متجر حبيب بناه للأقمشة",
+    "description": "متجر إلكتروني لأنواع الأقمشة بأسعار معقولة"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "products": "المنتجات",
+    "about": "معلومات عنا",
+    "contact": "اتصل بنا"
+  },
+  "categories": {
+    "title": "التسوق حسب الفئة",
+    "wedding_attire": "ملابس الزفاف",
+    "mens_casual": "الرجالية",
+    "womens_casual": "النسائية",
+    "womens_formal": "النسائية الرسمية",
+    "mens_formal": "الرجالية الرسمية",
+    "winter": "الشتاء"
+  },
+  "stories": {
+    "customer_satisfaction": "رضا العملاء",
+    "stretch_lace": "دانتيل مطاطي",
+    "guipure_lace": "دانتيل غيبور",
+    "dutch_cotton": "قطن هولندي",
+    "french_lace": "دانتيل فرنسي",
+    "needlework_lace": "دانتيل بعمل الإبرة",
+    "worked_lace": "دانتيل معمول",
+    "satin_silk": "حرير ساتان",
+    "silk_satin": "ساتان حريري",
+    "atlas_silk": "حرير أطلسي",
+    "crepe_silk": "حرير كريب",
+    "velvet_curtain": "ستارة مخملية"
+  },
+  "features": {
+    "premium_quality": {
+      "title": "جودة متميزة",
+      "description": "تُصنع أقمشتنا بأفضل المواد والحرفية."
+    },
+    "wide_selection": {
+      "title": "مجموعة واسعة",
+      "description": "اختر من مئات الأنماط والألوان والملمسات."
+    },
+    "fast_delivery": {
+      "title": "توصيل سريع",
+      "description": "احصل على أقمشتك المُسلمة إلى باب منزلك بسرعة وأمان."
+    },
+    "easy_returns": {
+      "title": "إرجاع سهل",
+      "description": "لست راضياً؟ أعد المنتج خلال 30 يوماً لاسترداد الأموال بالكامل."
+    },
+    "expert_support": {
+      "title": "دعم خبير",
+      "description": "متخصصو الأقمشة لدينا مستعدون لمساعدتك في اختيارك."
+    }
+  }
+}

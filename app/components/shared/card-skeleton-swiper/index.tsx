@@ -1,5 +1,5 @@
 'use client'
-import { Container } from "@/app/components/shared/contianer/container";
+import { Container } from "@/app/components/shared/container";
 import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
