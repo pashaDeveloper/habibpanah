@@ -20,6 +20,7 @@
     "swiper": "^12.0.3"
   },
   "devDependencies": {
+    "@swc/core": "^1.15.2",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -28,6 +29,7 @@
     "eslint-config-next": "16.0.1",
     "postcss": "^8.5.6",
     "tailwindcss": "^4",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }
