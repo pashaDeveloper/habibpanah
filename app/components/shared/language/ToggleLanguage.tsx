@@ -248,7 +248,7 @@ function ToggleLanguage() {
     <button
       ref={btnRef}
       className={`
-        fixed bottom-10 ltr:right-0 rtl:right-0 z-50
+        fixed bottom-30 ltr:right-0 rtl:right-0 z-10
         bg-linear-to-l from-[#8f4aec] via-[#7f53ef] to-[#2586ff]
         border-none text-white
         ltr:rounded-l-3xl

@@ -43,23 +43,48 @@
   "features": {
     "premium_quality": {
       "title": "优质品质",
-      "description": "我们的面料采用最优质的材料和工艺制作。"
+      "description": "采用最优质的材料和工艺制作。"
     },
     "wide_selection": {
       "title": "广泛选择",
-      "description": "从数百种图案、颜色和纹理中选择。"
+      "description": "数百种图案、颜色和纹理可选。"
     },
     "fast_delivery": {
       "title": "快速配送",
-      "description": "快速安全地将您的面料送到家门口。"
+      "description": "快速安全送货上门。"
     },
     "easy_returns": {
       "title": "轻松退货",
-      "description": "不满意？30天内退货可全额退款。"
+      "description": "30天内退货全额退款。"
     },
     "expert_support": {
       "title": "专家支持",
-      "description": "我们的面料专家随时准备帮助您选择。"
+      "description": "专家随时帮助您选择。"
     }
+  },
+  "hero": {
+    "summer_collection": {
+      "title": "夏季系列",
+      "description": "阳光季节的明亮生动面料"
+    },
+    "winter_warmers": {
+      "title": "冬日保暖",
+      "description": "寒冷天气的舒适温暖质地"
+    },
+    "spring_blossoms": {
+      "title": "春日花开",
+      "description": "焕然一新的花卉图案"
+    },
+    "autumn_hues": {
+      "title": "秋日色调",
+      "description": "秋季丰富的大地色调"
+    },
+    "classic_neutrals": {
+      "title": "经典中性色",
+      "description": "优雅色调的永恒图案"
+    },
+    "previous_slide": "上一张幻灯片",
+    "next_slide": "下一张幻灯片",
+    "go_to_slide": "转到幻灯片"
   }
 }

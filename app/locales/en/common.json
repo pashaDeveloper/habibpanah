@@ -43,23 +43,23 @@
   "features": {
     "premium_quality": {
       "title": "Premium Quality",
-      "description": "Our fabrics are made with the finest materials and craftsmanship."
+      "description": "Made with finest materials and craftsmanship."
     },
     "wide_selection": {
       "title": "Wide Selection",
-      "description": "Choose from hundreds of patterns, colors, and textures."
+      "description": "Hundreds of patterns, colors, and textures."
     },
     "fast_delivery": {
       "title": "Fast Delivery",
-      "description": "Get your fabrics delivered to your doorstep quickly and safely."
+      "description": "Fast and safe delivery to your doorstep."
     },
     "easy_returns": {
       "title": "Easy Returns",
-      "description": "Not satisfied? Return within 30 days for a full refund."
+      "description": "Return within 30 days for a full refund."
     },
     "expert_support": {
       "title": "Expert Support",
-      "description": "Our fabric specialists are ready to help with your selection."
+      "description": "Experts ready to help with your selection."
     }
   },
   "hero": {

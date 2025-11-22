@@ -4,7 +4,6 @@ import localFont from "next/font/local";
 import "../globals.css";
 import { ThemeProvider } from "@/app/components/theme-provider";
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
 import { ReactNode } from 'react';
 
 const geistSans = Geist({
@@ -15,6 +14,62 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const vazir = localFont({
+  src: [
+    {
+      path: "./../../public/fonts/vazir/Vazir.eot",
+      weight: "normal",
+      style: "normal",
+    },
+    {
+      path: "./../../public/fonts/vazir/Vazir.woff2",
+      weight: "normal",
+      style: "normal",
+    },
+    {
+      path: "./../../public/fonts/vazir/Vazir.woff",
+      weight: "normal",
+      style: "normal",
+    },
+    {
+      path: "./../../public/fonts/vazir/Vazir.ttf",
+      weight: "normal",
+      style: "normal",
+    },
+  ],
+  variable: "--font-vazir",
+  display: "swap",
+  fallback: ["Vazir", "sans-serif"],
+});
+
+const digiNozha = localFont({
+  src: [
+    {
+      path: "./../../public/fonts/DigiNozha/DigiNozha2Bold.eot",
+      weight: "bold",
+      style: "normal",
+    },
+    {
+      path: "./../../public/fonts/DigiNozha/DigiNozha2Bold.woff2",
+      weight: "bold",
+      style: "normal",
+    },
+    {
+      path: "./../../public/fonts/DigiNozha/DigiNozha2Bold.woff",
+      weight: "bold",
+      style: "normal",
+    },
+    {
+      path: "./../../public/fonts/DigiNozha/DigiNozha2Bold.ttf",
+      weight: "bold",
+      style: "normal",
+    },
+  ],
+  variable: "--font-digi-nozha",
+  display: "swap",
+  fallback: ["DigiNozha", "sans-serif"],
 });
 
 const iranYekan = localFont({
@@ -137,10 +192,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       ]
     },
     zh: {
-      title: "哈比卜·帕纳纺织店 - 伊朗最大的在线纺织品商店",
-      description: "哈比卜·帕纳纺织店，伊朗最大的在线纺织品商店。以合理的价格在线购买各种类型的纺织品。乌尔米亚纺织品在哪里买？乌尔米亚最好的纺织品商店。",
+      title: "哈比ب·帕纳纺织店 - 伊朗最大的在线纺织品商店",
+      description: "哈比ب·帕نا纺织店，伊朗最大的在线纺织品商店。以合理的价格在线购买各种类型的纺织品。乌尔米亚纺织品在哪里买？乌尔米亚最好的纺织品商店。",
       keywords: [
-        "哈比卜·帕纳纺织店",
+        "哈比ب·帕نا纺织店",
         "在线纺织品商店",
         "伊朗最大的纺织品商店",
         "在线购买纺织品",
@@ -213,7 +268,7 @@ export default async function RootLayout({
       lang={locale}
     >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${iranYekan.variable} antialiased text-foreground transition-colors duration-300 min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} ${vazir.variable} ${digiNozha.variable} ${iranYekan.variable} antialiased text-foreground transition-colors duration-300 min-h-screen`}
       >
         <NextIntlClientProvider messages={messages} locale={locale}>
           <ThemeProvider>

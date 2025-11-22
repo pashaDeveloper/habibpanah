@@ -94,13 +94,14 @@ export function Features() {
           ))}
         </Swiper>
       </div>
-      
+      <Container>
+
       {/* Desktop grid view */}
       <div className="hidden md:grid md:grid-cols-5 gap-4 mt-6">
         {features.map((feature) => (
           <div 
-            key={feature.id} 
-            className={`${feature.color} border ${feature.borderColor} p-5 rounded-xl shadow-sm transition-transform hover:scale-[1.02]`}
+          key={feature.id} 
+          className={`${feature.color} border ${feature.borderColor} p-5 rounded-xl shadow-sm transition-transform hover:scale-[1.02]`}
           >
             <div className="flex items-center gap-3 mb-3">
               {feature.icon}
@@ -110,6 +111,7 @@ export function Features() {
           </div>
         ))}
       </div>
+        </Container>
     </>
   );
 }

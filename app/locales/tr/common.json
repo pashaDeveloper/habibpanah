@@ -43,23 +43,48 @@
   "features": {
     "premium_quality": {
       "title": "Özel Kalite",
-      "description": "Kumaşlarımız en kaliteli malzemeler ve zanaatkarlıkla üretilmektedir."
+      "description": "En kaliteli malzemeler ve zanaatkarlıkla üretilir."
     },
     "wide_selection": {
       "title": "Geniş Seçim",
-      "description": "Yüzlerce desen, renk ve dokudan seçiminizi yapın."
+      "description": "Yüzlerce desen, renk ve dokudan seçim."
     },
     "fast_delivery": {
       "title": "Hızlı Teslimat",
-      "description": "Kumaşlarınızı hızlı ve güvenli bir şekilde kapınıza teslim edin."
+      "description": "Hızlı ve güvenli kapıya teslimat."
     },
     "easy_returns": {
       "title": "Kolay İade",
-      "description": "Memnun değil misiniz? 30 gün içinde tam iade alın."
+      "description": "30 gün içinde tam iade garantisi."
     },
     "expert_support": {
       "title": "Uzman Destek",
-      "description": "Kumaş uzmanlarımız seçiminizde size yardımcı olmaya hazırdır."
+      "description": "Uzmanlar seçiminizde yardımcı olur."
     }
+  },
+  "hero": {
+    "summer_collection": {
+      "title": "Yaz Koleksiyonu",
+      "description": "Güneşli mevsim için parlak ve canlı kumaşlar"
+    },
+    "winter_warmers": {
+      "title": "Kış Isıtıcılar",
+      "description": "Soğuk günler için rahat ve sıcak dokular"
+    },
+    "spring_blossoms": {
+      "title": "İlkbahar Çiçekleri",
+      "description": "Yenilenme için taze çiçekli desenler"
+    },
+    "autumn_hues": {
+      "title": "Sonbahar Renkleri",
+      "description": "Sonbahar mevsimi için zengin toprak tonları"
+    },
+    "classic_neutrals": {
+      "title": "Klasik Nötraller",
+      "description": "Zarif tonlarda zamansız desenler"
+    },
+    "previous_slide": "Önceki slayt",
+    "next_slide": "Sonraki slayt",
+    "go_to_slide": "Slayta git"
   }
 }
